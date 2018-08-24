@@ -1,9 +1,6 @@
 import numpy as npy 
 
-# encoding is done in 8 bits per character
 steve = open('jobs_speech.txt').read()
-
-#split for words
 jobs = steve.split()
 
 #now find all the pairs 
@@ -13,8 +10,6 @@ def pair_generation(jobs):
 		yield(jobs[x], jobs[x+1])
 
 pairings = pair_generation(jobs)
-
-#create dict and fill
 
 dict = {}
 for x, y in pairings:
